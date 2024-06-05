@@ -1,0 +1,48 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    position: absolute;
+    justify-content: center;
+    place-content: center;
+    display: grid;
+    right: 50%;
+    left: 50%;
+    top: 25%;
+    width: 100px;
+    height: 300px;
+    
+}
+
+#title {
+    font-size: 52px;
+    color: whitesmoke;
+    font-family:'poppins';
+    font-weight: 900;
+}
+
+
+
+#wText {
+    font-size: 42px;
+    color: whitesmoke;
+    font-family:'poppins';
+    font-weight: 600;
+
+}
+
+#btnColor { 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    background: whitesmoke;
+    opacity: 0.5;
+    border:none;
+    border-radius: 16px;
+    font-size: 32px;
+    padding: 10, 10, 16, 16px;
+    backdrop-filter: blur(5px);
+    
+}
+
