@@ -74,14 +74,23 @@ let integrantes = [
     {nombre:"Luis", edad:14}
 ]
 
-    let max = integrantes.reduce(function(max, val){
-          
-    return val.edad > max.edad? val:max}, integrantes[0]);
-    let min = integrantes.reduce(function(max, val){
-         
-    return val.edad < max.edad? val:max}, integrantes[0]);
-    console.log("Miembro mayor: "+max.nombre+" de "+max.edad+" años");
-    console.log("Miembro más joven: "+min.nombre+" de "+min.edad+" años");
+    let old = integrantes[0];
+    let young = integrantes[0];
+
+    for(let i=0; i<integrantes.length; i++){
+        if(integrantes[i].edad > old.edad){
+            old = integrantes[i];
+        }
+        if(integrantes[i].edad < young.edad){
+            young = integrantes[i];
+        }
+    }
+
+    console.log("Miembro mayor: "+old.nombre+" de "+old.edad+" años");
+    console.log("Miembro más joven: "+young.nombre+" de "+young.edad+" años");
+
+
+
 
 //EJERCICIO 7
 //se declara el array
@@ -107,18 +116,20 @@ function arrayGuion(colores){
 
  //EJERCICIO 8
 
-function sumaLista(arrayNum){
+function sumaLista(listaNum){
 
-    const suma = arrayNum[0];
+    let suma = 0;
 
-    for(let i=0; i<arrayNum.length; i++){
-        suma = arrayNum[0]+suma;
+    for(let numero of listaNum){
+        suma +=numero;
     }
     return suma;
-
-
 }
 
+const nums =[1, 5, 44, 10];
+console.log(nums);
+const resultadoSuma = sumaLista(nums);
+console.log('La suma total del arreglo es:', resultadoSuma);
 
 //EJERCICIO 9
 
