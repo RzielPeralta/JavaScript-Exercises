@@ -1,14 +1,14 @@
 /*EJERCICIOS SOBRE ARRAYS*/
 
 
-//EJERCICIO 1
+//EJERCICIO 01
 
 var weekDays = new Array(6);
 weekDays = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado', 'Domingo'];
 console.table(`Días de la semana:`, weekDays);
 
 
-//EJERCICIO 2
+//EJERCICIO 02
 
 const daysWork = []
     daysWork.push("lunes","martes","miercoles","jueves","viernes");
@@ -17,7 +17,7 @@ const daysWork = []
     console.log(daysWork[i].toUpperCase());
 
 
-//EJERCICIO 3
+//EJERCICIO 03
 var numsAll = new Array(10);
 numsAll = [2,4,6,10,35,23,11,8,12,5];
 
@@ -28,7 +28,7 @@ console.log(`Array de numeros pares:`,par);
 console.log(`Array de numeros impares:`,noPar);
 
 
-//EJERCICIO 4
+//EJERCICIO 04
 //pendiente de revisar
 var numsAl = new Array(10);
 numsAl = [2,4,6,10,99,23,11,32,12,5];
@@ -39,7 +39,7 @@ console.log(`Suma de numeros pares:`,pair);
 console.log(`Suma de numeros impares:`,noPair);
 
 
-//EJERCICIO 5
+//EJERCICIO 05
 
 //Definiendo arreglos
 const asistentesHTML = ["Pedro", "Juan", "Ana"];
@@ -64,7 +64,7 @@ console.log(encontrarAsistentesAmbosCursos(asistentesHTML, asistentesCSS));
 
 
 
-//EJERCICIO 6
+//EJERCICIO 06
 
 //se crea lista de objetos
 let integrantes = [
@@ -92,12 +92,12 @@ let integrantes = [
 
 
 
-//EJERCICIO 7
+//EJERCICIO 07
 //se declara el array
 const colores = ["Rojo","Verde","Azul","Negro","Purpura","Magenta","Cafe","Blanco","Gris"]
 
 //se crea la funcion, pasando como parametro el array
-function arrayGuion(colores){
+function arrayGuion(){
     
         //accedemos a la primera posicion del array
         let cadena = colores[0];
@@ -114,7 +114,7 @@ function arrayGuion(colores){
 
 
 
- //EJERCICIO 8
+ //EJERCICIO 08
 
 function sumaLista(listaNum){
 
@@ -131,10 +131,64 @@ console.log(nums);
 const resultadoSuma = sumaLista(nums);
 console.log('La suma total del arreglo es:', resultadoSuma);
 
-//EJERCICIO 9
+//EJERCICIO 09
 
+const paresServicios = [
+   {dia:"lunes",nombre:"Maria"},
+   {dia:"martes",nombre:"Luis"},
+   {dia:"miercoles",nombre:"Antonia"},
+   {dia:"jueves",nombre:"Pedro"},
+   {dia:"viernes",nombre:"Marisa"},
+]
+console.log(paresServicios);
+
+//se crea la funcion la cual recibe como parametro "dia" del objeto de arriba
+function nomAtender(dia){
+    //convertimos los caracteres de "dia" a minusculas
+    const diaMinuscula = dia.toLowerCase();
+
+    //accedemos al arreglo con un ciclo for, si entrada en las pos[0,1,2,3..] es igual a lo que hay en diaMinuscula
+    //se imprime en consola el día y el nombre del operador
+    for(const entrada of paresServicios){
+        if(entrada[0]===diaMinuscula){
+            return 'El servicio para el día ${dia} está a cargo de ${entrada[1]}';
+        //en caso de escribir un dia fuera de los declarados, se muestra el siguiente msj
+        }return 'No hay servicio de atencion para el día ${dia}';
+        }
+        
+        //uso de funcion, pasando como parametros los días del arreglo antes definido
+    console.log(nomAtender("martes"));
+    console.log(nomAtender("sabado"));
+    console.log(nomAtender("miercoles"));
+    console.log(nomAtender("Jueves"));
+        }
 
 
 /*EJERCICIOS SOBRE OBJETOS*/
+
+//EJERCICIO 01
+/*
+const alumnoDatos ={
+    nombre: "Jose Gutierrez",
+    notasMaterias = {
+        ingles:8,
+        programacion:8,
+        html:8.8
+    }
+}
+
+function mediaSuma(notasMaterias){
+    let suma = 0;
+    for(const materia in notasMaterias){
+        suma += notasMaterias[materia];
+    }return suma/Object.keys(notasMaterias).length;
+
+}
+console.log('Nombre:${alumnoDatos.nombre}´); 
+console.log('Media:${mediaSuma(alumnoDatos.notasMateria´)*/
+
+//EJERCICIO 02)
+//EJERCICIO 03
+//EJERCICIO 04
 
 
